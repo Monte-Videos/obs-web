@@ -8,7 +8,7 @@ const svelteFiles = ['**/*.svelte', '**/*.svelte.*']
 
 export default [
   ...neostandard({
-    env: ['browser', 'serviceworker'],
+    env: ['browser', 'serviceworker', 'node'],
     filesTs: ['**/*.svelte.ts'],
     ignores: resolveIgnoresFromGitignore(),
     ts: true

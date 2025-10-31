@@ -54,6 +54,16 @@ npm ci
 npm run dev # or: npm run build
 ```
 
+### Scheduler backend
+
+The automation scheduler runs as a lightweight Node.js service so playlists can trigger even when the browser UI is closed. Start it with:
+
+```bash
+npm run server
+```
+
+The service exposes its API on port `8080` by default. When running inside Docker the backend will also serve the static client from the `public/` directory.
+
 #### Docker:
 
 ```bash
