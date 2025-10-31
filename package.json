@@ -6,7 +6,8 @@
     "build": "vite build",
     "dev": "vite dev --host --port 8080",
     "start": "vite preview --host --port 8080",
-    "lint": "eslint . --ext .js,.ts,.svelte,.html --fix"
+    "lint": "eslint . --ext .js,.ts,.svelte,.html --fix",
+    "server": "node server/index.js"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",

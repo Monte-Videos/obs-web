@@ -1,6 +1,9 @@
 FROM node:lts-alpine
-COPY ./ ./
-RUN npm ci && npm run build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
 EXPOSE 8080
-ENTRYPOINT [ "npm", "run", "start" ]
+CMD [ "node", "server/index.js" ]
 LABEL org.opencontainers.image.source="https://github.com/Niek/obs-web"
